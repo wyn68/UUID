@@ -1,20 +1,131 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+  <img width="1200" height="400" alt="UUID Generator Pro" src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=UUID%20Generator%20Pro%20application%20interface%20with%20dark%20mode%2C%20showing%20generated%20UUIDs%20and%20settings%20controls%2C%20professional%20clean%20design%2C%20blue%20accent%20colors&image_size=landscape_16_9" />
 </div>
 
-# Run and deploy your AI Studio app
+# UUID 生成器 Pro
 
-This contains everything you need to run your app locally.
+一个功能强大、安全可靠的 UUID 生成器，支持多种 UUID 版本，提供丰富的自定义选项，完全在客户端生成，保护隐私。
 
-View your app in AI Studio: https://ai.studio/apps/drive/1cVwjdckGM93j6L_UqZDeTnEez4yGqa6Z
+## ✨ 功能特性
 
-## Run Locally
+- **多版本支持**：生成 V1、V3、V4、V5、V7 版本的 UUID
+- **实时预览**：设置更改时自动更新生成结果
+- **自定义选项**：
+  - 生成数量（1-100）
+  - 大写/小写切换
+  - 去除连字符
+  - V3/V5 命名空间和名称设置
+- **深色模式**：支持系统深色模式和手动切换
+- **一键复制**：轻松复制单个 UUID 到剪贴板
+- **响应式设计**：适配桌面和移动设备
 
-**Prerequisites:**  Node.js
+## 🛠️ 技术栈
 
+- React 19.2.4
+- TypeScript
+- Vite
+- lucide-react（图标库）
+- uuid 库（标准 RFC4122 实现）
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 🚀 快速开始
+
+### 前提条件
+
+- Node.js 18+
+
+### 安装和运行
+
+1. **克隆项目**
+   ```bash
+   git clone <repository-url>
+   cd uuid-生成器-pro
+   ```
+
+2. **安装依赖**
+   ```bash
+   npm install
+   ```
+
+3. **运行开发服务器**
+   ```bash
+   npm run dev
+   ```
+
+4. **构建生产版本**
+   ```bash
+   npm run build
+   ```
+
+5. **预览生产构建**
+   ```bash
+   npm run preview
+   ```
+
+## 📖 使用说明
+
+### 基本使用
+1. 打开应用后，默认会自动生成 5 个 V4 版本的 UUID
+2. 点击「生成」按钮可手动生成新的 UUID
+3. 点击 UUID 旁边的复制图标可将其复制到剪贴板
+
+### 高级设置
+
+#### UUID 版本选择
+- **V1**：基于时间戳和 MAC 地址生成
+- **V3**：基于命名空间和名称的 MD5 哈希
+- **V4**：完全随机生成
+- **V5**：基于命名空间和名称的 SHA-1 哈希
+- **V7**：基于时间戳和随机数，支持排序
+
+#### 其他设置
+- **数量**：调整生成的 UUID 数量
+- **大写**：切换 UUID 的大小写
+- **去除连字符**：移除 UUID 中的连字符
+- **命名空间**：V3/V5 版本使用的命名空间 UUID
+- **名称**：V3/V5 版本使用的名称字符串
+
+## 📁 项目结构
+
+```
+uuid-生成器-pro/
+├── components/           # React 组件
+│   ├── SettingsControls.tsx  # 设置控制面板
+│   ├── Toast.tsx             # 提示消息组件
+│   └── UUIDList.tsx          # UUID 列表组件
+├── utils/
+│   └── uuidGen.ts        # UUID 生成工具函数
+├── App.tsx               # 主应用组件
+├── types.ts              # TypeScript 类型定义
+├── package.json          # 项目配置和依赖
+├── tsconfig.json         # TypeScript 配置
+├── vite.config.ts        # Vite 配置
+└── index.html            # HTML 入口文件
+```
+
+## 🔒 安全性
+
+- **客户端生成**：所有 UUID 均在浏览器中生成，不发送到服务器
+- **隐私保护**：无需网络连接即可使用，保护您的隐私
+- **加密随机**：V4 和 V7 版本使用浏览器的加密随机数生成器
+
+## 📝 注意事项
+
+- V1 版本基于时间戳和 MAC 地址，可能会泄露一些设备信息
+- V3 和 V5 版本是确定性的，相同的命名空间和名称会生成相同的 UUID
+- 生成大量 UUID 时可能会影响性能，建议保持在合理范围内
+
+## 🤝 贡献
+
+欢迎提交 Issue 和 Pull Request 来改进这个项目！
+
+## 📄 许可证
+
+MIT License
+
+## 📞 联系方式
+
+如有问题或建议，请随时联系项目维护者。
+
+---
+
+**享受生成 UUID 的乐趣！** 🎉
