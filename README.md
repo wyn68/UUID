@@ -1,7 +1,3 @@
-<div align="center">
-  <img width="1200" height="400" alt="UUID Generator Pro" src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=UUID%20Generator%20Pro%20application%20interface%20with%20dark%20mode%2C%20showing%20generated%20UUIDs%20and%20settings%20controls%2C%20professional%20clean%20design%2C%20blue%20accent%20colors&image_size=landscape_16_9" />
-</div>
-
 # UUID 生成器 Pro
 
 一个功能强大、安全可靠的 UUID 生成器，支持多种 UUID 版本，提供丰富的自定义选项，完全在客户端生成，保护隐私。
