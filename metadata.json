@@ -1,0 +1,5 @@
+{
+  "name": "UUID 生成器 Pro",
+  "description": "专业的客户端 UUID 生成器，支持版本 1、3、4、5 和 7，提供批量生成和格式化工具。",
+  "requestFramePermissions": []
+}
